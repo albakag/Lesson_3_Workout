@@ -11,7 +11,8 @@
     <string name="push_up_button">Push up</string>
     <string name="squatting">Squatting</string>
     <string name="records_text">Records</string>
-    <string name="call_button">Call</string>
+    <string name="call_button">Send information</string>
     <string name="send_info_tittle">Send information</string>
+    <string name="message_has_been_sent_successfully">Message has been sent successfully</string>
 
 </resources>

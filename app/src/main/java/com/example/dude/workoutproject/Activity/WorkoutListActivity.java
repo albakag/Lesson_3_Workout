@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.dude.workoutproject.Model.Workout;
+
 import com.example.dude.workoutproject.R;
 
 
@@ -45,6 +45,22 @@ public class WorkoutListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent sendInfoPage = new Intent(".Activity.WorkoutSendInfo");
                 startActivity(sendInfoPage);
+            }
+        });
+
+        pushUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentPush = new Intent(".Activity.WorkoutDetailActivity");
+                startActivity(intentPush);
+            }
+        });
+
+        squitting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentSquitting = new Intent(".Activity.WorkoutDetailActivity");
+                startActivity(intentSquitting);
             }
         });
     }

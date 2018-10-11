@@ -13,7 +13,14 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".Activity.WorkoutDetailActivity"
-            android:parentActivityName=".Activity.WorkoutListActivity"></activity>
+            android:parentActivityName=".Activity.WorkoutListActivity">
+            <intent-filter>
+                <action android:name=".Activity.WorkoutDetailActivity" />
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".Activity.WorkoutListActivity"
             android:label="@string/about_title">
