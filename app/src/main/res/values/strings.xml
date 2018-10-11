@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SeptemberWorkout</string>
+    <string name="about_title">Main page</string>
+    <string name="date_text">Date: </string>
+    <string name="reps_count_text">Quantity of repeats: </string>
+    <string name="weight_text">Weight:</string>
+    <string name="kg">Kg.</string>
+    <string name="save">Save</string>
+    <string name="excercise_name">Pulling Ups</string>
+    <string name="pull_up_button">Pull up</string>
+    <string name="push_up_button">Push up</string>
+    <string name="squatting">Squatting</string>
+    <string name="records_text">Records</string>
+    <string name="call_button">Call</string>
+    <string name="send_info_tittle">Send information</string>
+
+</resources>

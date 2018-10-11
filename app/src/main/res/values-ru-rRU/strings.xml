@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Сентябрьские упражнения</string>
+    <string name="about_title">Основная страница</string>
+    <string name="date_text">Дата: </string>
+    <string name="reps_count_text">Количество повторов: </string>
+    <string name="weight_text">Вес:</string>
+    <string name="kg">Кг.</string>
+    <string name="save">Сохранить</string>
+    <string name="excercise_name">Подтягивание на перекладине</string>
+    <string name="pull_up_button">Подтягивания</string>
+    <string name="push_up_button">Отжимания</string>
+    <string name="squatting">Приседания</string>
+    <string name="records_text">Рекорды</string>
+    <string name="call_button">Позвонить</string>
+    <string name="send_info_tittle">Отправить информацию</string>
+
+</resources>
