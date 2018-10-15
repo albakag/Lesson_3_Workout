@@ -11,7 +11,8 @@
     <string name="push_up_button">Отжимания</string>
     <string name="squatting">Приседания</string>
     <string name="records_text">Рекорды</string>
-    <string name="call_button">Позвонить</string>
+    <string name="call_button">Отправить данные</string>
     <string name="send_info_tittle">Отправить информацию</string>
+    <string name="message_has_been_sent_successfully">Сообщение отправлено</string>
 
 </resources>
