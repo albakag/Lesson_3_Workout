@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="@string/share_it"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="200"
+        android:title="@string/settings"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_quit"
+        android:orderInCategory="999"
+        android:title="@string/Exit"
+        app:showAsAction="never"/>
+
+
+
+</menu>
