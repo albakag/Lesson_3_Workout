@@ -1,8 +1,12 @@
 package com.example.dude.workoutproject.Activity;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +30,7 @@ public class WorkoutDetailActivity extends AppCompatActivity {
     private SeekBar weightSeekBar;
     private EditText repsCountEditText;
     private Button saveRecordButton;
-    private Button nextActivityPage;
+    final String LOG = "WorkoutDetailActivity";
 
 
     @Override
@@ -34,9 +38,100 @@ public class WorkoutDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_detail_pull_up);
 
+        Log.d(LOG, "Вызван метод onCreat");
         Workout workout = new Workout("Подтягивания", "Подтягивания на перекладине", 0, new Date(), 0);
         initGUI(workout);
         addListeners();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_detail_activity, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(LOG, "Вызван метод onStart");
+    }
+
+    //ДЗ - восстановление состояний
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        recordRepsCount.setText(savedInstanceState.getString("Repeats"));
+        recordWeight.setText(savedInstanceState.getString("Weight"));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(LOG, "Вызван метод onResume");
+    }
+
+    //ДЗ - Сохранение состояний
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("Repeats", recordRepsCount.getText().toString());
+        outState.putString("Weight", recordWeight.getText().toString());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(LOG, "Вызван метод onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(LOG, "Вызван метод onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(LOG, "Вызван метод onDestroy");
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.action_share:
+                shareRecord();
+                return true;
+            case R.id.action_settings:
+                return true;
+            case R.id.action_quit:
+                quitFromApp();
+                return true;
+                default:return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    //ДЗ - Выход из приложения по нажатию в меню кнопки Quit
+    private void quitFromApp() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+        System.exit(0);
+    }
+
+
+    private void shareRecord() {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Message");
+        sendIntent.setType("text/plain");
+
+        if(sendIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(sendIntent);
+        }
     }
 
     private void addListeners() {
@@ -73,6 +168,20 @@ public class WorkoutDetailActivity extends AppCompatActivity {
                 }
             }
         });
+
+//        shareButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent sendIntent = new Intent();
+//                sendIntent.setAction(Intent.ACTION_SEND);
+//                sendIntent.putExtra(Intent.EXTRA_TEXT, "Message");
+//                sendIntent.setType("text/plain");
+//
+//                if(sendIntent.resolveActivity(getPackageManager()) != null) {
+//                    startActivity(sendIntent);
+//                }
+//            }
+//        });
     }
 
     private void initGUI(Workout workout) {
