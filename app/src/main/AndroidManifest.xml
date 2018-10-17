@@ -17,9 +17,8 @@
             <intent-filter>
                 <action android:name=".Activity.WorkoutDetailActivity" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".Activity.WorkoutListActivity"
@@ -31,16 +30,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.WorkoutSendInfo"
+        <activity
+            android:name=".Activity.WorkoutSendInfo"
             android:label="@string/send_info_tittle"
             android:parentActivityName=".Activity.WorkoutListActivity">
+            <intent-filter>
+                <action android:name=".Activity.WorkoutSendInfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.StopWatch"></activity>
+
+        <activity android:name=".Activity.ListItem"
+            android:label="@string/mainfest_list_item"
+            android:parentActivityName=".Activity.WorkoutDetailActivity">
 
             <intent-filter>
-                <action android:name=".Activity.WorkoutSendInfo"/>
+                <action android:name=".Activity.ListItem" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
         </activity>
+
     </application>
 
 </manifest>

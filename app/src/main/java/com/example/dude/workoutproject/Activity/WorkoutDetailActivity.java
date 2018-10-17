@@ -103,12 +103,19 @@ public class WorkoutDetailActivity extends AppCompatActivity {
                 shareRecord();
                 return true;
             case R.id.action_settings:
+                nextAcivityPage();
                 return true;
             case R.id.action_quit:
                 quitFromApp();
                 return true;
                 default:return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void nextAcivityPage() {
+        Intent nextActivityIntent = new Intent(".Activity.ListItem");
+        startActivity(nextActivityIntent);
+
     }
 
 
@@ -152,7 +159,6 @@ public class WorkoutDetailActivity extends AppCompatActivity {
             }
         });
 
-        //После комментария на ГитХаб перенес обработчик в слушателей
         saveRecordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,20 +174,6 @@ public class WorkoutDetailActivity extends AppCompatActivity {
                 }
             }
         });
-
-//        shareButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent sendIntent = new Intent();
-//                sendIntent.setAction(Intent.ACTION_SEND);
-//                sendIntent.putExtra(Intent.EXTRA_TEXT, "Message");
-//                sendIntent.setType("text/plain");
-//
-//                if(sendIntent.resolveActivity(getPackageManager()) != null) {
-//                    startActivity(sendIntent);
-//                }
-//            }
-//        });
     }
 
     private void initGUI(Workout workout) {

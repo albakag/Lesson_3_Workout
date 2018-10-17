@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/list_item_squad_image_card_view"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="4dp"
+            android:background="@color/cardview_dark_background"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/list_item_text_tittle_card_view"
+                android:textColor="@color/black_card_view"
+                android:layout_toLeftOf="@+id/list_item_more"
+                android:layout_toRightOf="@+id/list_item_squad_image_card_view"
+                android:text="@string/text"
+                />
+
+        <TextView
+            android:id="@+id/list_item_description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/list_item_squad_image_card_view"
+            android:layout_below="@+id/list_item_text_tittle_card_view"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginRight="4dp"
+            android:text="@string/text_second"/>
+
+        <ImageView
+            style="@style/WrapContent"
+            android:id="@+id/list_item_more"
+            android:src="@drawable/ic_more"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <View
+            android:id="@+id/list_item_horizontal_separator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/list_item_description_text_view"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_below="@+id/list_item_horizontal_separator"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+
+        <LinearLayout
+            style="@style/LinearLayoutRecordItemList">
+
+            <ImageView
+                style="@style/WrapContent"
+                android:src="@drawable/ic_weight"/>
+            <TextView
+                style="@style/WrapContent"
+                android:id="@+id/list_item_weight_card_view"
+                android:text="50 kg"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutRecordItemList">
+
+            <ImageView
+                style="@style/WrapContent"
+                android:src="@drawable/ic_repeats"/>
+            <TextView
+                style="@style/WrapContent"
+                android:id="@+id/list_item_repeats_card_view"
+                android:text="50"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutRecordItemList">
+
+            <ImageView
+                style="@style/WrapContent"
+                android:src="@drawable/ic_calendar"/>
+
+            <TextView
+                style="@style/WrapContent"
+                android:id="@+id/list_item_calendar"
+                android:text=".10.10.2000"/>
+        </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
