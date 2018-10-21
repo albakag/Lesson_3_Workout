@@ -17,13 +17,15 @@
     <string name="Exit">Выход</string>
     <string name="share_it">Поделиться</string>
     <string name="settings">Переход на следующую активность</string>
-    <string name="startStopwatchButton">Start</string>
-    <string name="stop_StopwatchButton">Stop</string>
-    <string name="restart_StopwatchButton">Restart</string>
+    <string name="startStopwatchButton">Старт</string>
+    <string name="stop_StopwatchButton">Стоп</string>
+    <string name="restart_StopwatchButton">Перезапуск</string>
     <string name="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, perspiciatis!</string>
     <string name="text_second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur doloribus ducimus esse exercitationem illum iure, natus rem tempora voluptates! Adipisci consequuntur dignissimos eius fugit, numquam perspiciatis placeat rerum sint?</string>
     <string name="workout_detail_repeats_example">0</string>
     <string name="workout_detail_record_weight">0</string>
     <string name="mainfest_list_item">List Item</string>
+    <string name="stop_watch_activity_time">0:00:00</string>
+    <string name="stop_watch_manifest">Секундомер</string>
 
 </resources>

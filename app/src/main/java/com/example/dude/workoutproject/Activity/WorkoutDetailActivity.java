@@ -14,6 +14,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.dude.workoutproject.Model.Workout;
+import com.example.dude.workoutproject.Model.WorkoutList;
 import com.example.dude.workoutproject.R;
 
 import java.text.SimpleDateFormat;
@@ -37,9 +38,14 @@ public class WorkoutDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_detail_pull_up);
-
         Log.d(LOG, "Вызван метод onCreat");
-        Workout workout = new Workout("Подтягивания", "Подтягивания на перекладине", 0, new Date(), 0);
+
+        Intent intent = getIntent();
+        int index = intent.getIntExtra("workout_index", 0);
+        Workout workout = WorkoutList.getInstance()
+                .getWorkouts()
+                .get(index);
+
         initGUI(workout);
         addListeners();
     }
