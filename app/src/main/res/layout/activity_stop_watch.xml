@@ -14,12 +14,13 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Chronometer
-            android:id="@+id/chronometer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            style="@style/WrapContent"
+            android:id="@+id/stop_watch"
+            android:text="@string/stop_watch_activity_time"
+            android:textSize="70sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,48 +40,45 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            style="@style/WrapContent"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_gravity="center">
     <Button
+        style="@style/WrapContent"
         android:id="@+id/start_stopwatch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_gravity="center"
-        android:text="@string/startStopwatchButton" />
+        android:text="@string/startStopwatchButton"
+        android:onClick="btnStart"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            style="@style/WrapContent"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_gravity="center">
     <Button
+        style="@style/WrapContent"
         android:id="@+id/stop_stopwatch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_gravity="center"
-        android:text="@string/stop_StopwatchButton" />
+        android:text="@string/stop_StopwatchButton"
+        android:onClick="btnStop"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            style="@style/WrapContent"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_gravity="center">
     <Button
+        style="@style/WrapContent"
         android:id="@+id/restart_stopwatch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_gravity="center"
+        android:onClick="btnReset"
         android:text="@string/restart_StopwatchButton" />
         </LinearLayout>
     </LinearLayout>

@@ -40,9 +40,21 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.StopWatch"></activity>
 
-        <activity android:name=".Activity.ListItem"
+        <activity
+            android:name=".Activity.StopWatch"
+            android:label="@string/stop_watch_manifest"
+            android:parentActivityName=".Activity.WorkoutListActivity">
+            <intent-filter>
+                <action android:name=".Activity.StopWatch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".Activity.ListItem"
             android:label="@string/mainfest_list_item"
             android:parentActivityName=".Activity.WorkoutDetailActivity">
 

@@ -4,6 +4,7 @@
     android:layout_marginRight="16dp"
     android:layout_marginLeft="16dp"
     android:layout_marginTop="8dp"
+    android:id="@+id/card_view"
     android:layout_height="wrap_content">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -64,7 +65,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_below="@+id/list_item_description_text_view"
+            android:layout_below="@+id/list_item_squad_image_card_view"
             />
 
         <LinearLayout
