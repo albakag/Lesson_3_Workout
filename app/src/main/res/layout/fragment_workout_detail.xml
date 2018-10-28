@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activity.WorkoutDetailActivity">
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -154,7 +154,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginRight="4dp"
@@ -164,9 +163,17 @@
             <Button
                 android:id="@+id/workout_detail_save_button"
                 style="@style/WrapContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/save" />
+
+            <Button
+            android:id="@+id/fragment_detail_anime_sample"
+            style="@style/WrapContent"
+            android:text="SampleAnime"
+            android:layout_marginTop="4dp"/>
         </LinearLayout>
 
     </LinearLayout>
