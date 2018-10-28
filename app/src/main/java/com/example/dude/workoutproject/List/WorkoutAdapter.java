@@ -9,11 +9,17 @@ import android.view.ViewGroup;
 import com.example.dude.workoutproject.Model.Workout;
 import com.example.dude.workoutproject.Model.WorkoutList;
 import com.example.dude.workoutproject.R;
+import com.example.dude.workoutproject.interfaces.OnListItemClickListener;
 
 import java.util.List;
 
 public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutViewHolder> {
     List<Workout> workoutList = WorkoutList.getInstance().getWorkouts();
+    private OnListItemClickListener itemClickListener;
+
+    public WorkoutAdapter(OnListItemClickListener itemClickListener) {
+        this.itemClickListener = itemClickListener;
+    }
 
     @NonNull
     @Override
@@ -27,7 +33,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull WorkoutViewHolder workoutViewHolder, int index) {
-        workoutViewHolder.bindView(workoutList.get(index));
+        workoutViewHolder.bindView(workoutList.get(index), index, itemClickListener);
     }
 
     @Override
